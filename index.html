@@ -1,0 +1,385 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Supernal</title>
+    <link rel="icon" href="https://icons8.ru/icon/oWiuH0jFiU0R/telegram-app" type="image/webp">
+    <meta name="theme-color" content="#e03326">
+    <meta property="og:title" content="Supernal (1# UD)">
+    <meta property="og:description" content="Unleash havoc with the best scripting experience.">
+    <meta property="og:image" content="https://icons8.ru/icon/oWiuH0jFiU0R/telegram-app">
+    <meta property="og:url" content="https://getsAtlantis.vercel.app">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta property="og:site_name" content="Supernal">
+    <meta name="twitter:image:alt" content="Supernal Logo">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@700&display=swap" rel="stylesheet">
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Orbitron:wght@700&display=swap">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Raleway:wght@700&display=swap">
+  <link rel="stylesheet" href="styles.css">
+  <script src="scripts.js" defer></script>
+  <style>
+    body {
+        background-color: #000;
+        color: #e0e0e0;
+        font-family: 'Inter', sans-serif;
+        margin: 0;
+        overflow-x: hidden;
+        scrollbar-width: thin;
+        scrollbar-color: #ff00ff #222;
+    }
+
+    ::-webkit-scrollbar {
+        width: 8px;
+    }
+
+    ::-webkit-scrollbar-track {
+        background: #222;
+    }
+
+    ::-webkit-scrollbar-thumb {
+        background-color: #e100ff;
+        border-radius: 4px;
+    }
+
+    nav {
+        display: flex;
+        align-items: center;
+        padding: 8px 20px;
+        border-radius: 20px;
+        width: 80%;
+        margin: 20px auto;
+        justify-content: space-between;
+    }
+
+    .navbar-logo {
+        display: flex;
+        align-items: center;
+    }
+
+    .navbar-logo img {
+        width: 60px;
+        height: 60px;
+        margin-right: 8px;
+    }
+
+    .navbar-logo-text {
+        font-family: 'Orbitron', sans-serif;
+        font-size: 1.5rem;
+        color: #c300ff;
+        font-weight: bold;
+        text-shadow: 0 0 10px rgba(195, 0, 255, 0.7);
+    }
+
+    .navbar-links {
+        display: flex;
+        align-items: center;
+    }
+
+    .navbar-links a {
+        color: #ffffff;
+        margin-right: 20px;
+        font-weight: 600;
+        transition: color 0.3s;
+        cursor: pointer;
+    }
+
+    .navbar-links a:hover {
+        color: #e100ff;
+    }
+
+    .discord-button {
+        background-color: #7289da;
+        color: #ffffff;
+        padding: 8px 15px;
+        border-radius: 20px;
+        display: flex;
+        align-items: center;
+        transition: background 0.3s, transform 0.3s;
+    }
+
+    .discord-button:hover {
+        background-color: #5a78f1;
+        transform: scale(1.05);
+    }
+
+    .update-banner {
+        position: absolute;
+        top: 70px;
+        left: 50%;
+        transform: translateX(-50%);
+        padding: 8px 20px;
+        background: rgba(255, 0, 0, 0.1);
+        color: #fff;
+        border-radius: 20px;
+        font-size: 0.875rem;
+        font-weight: 700;
+        text-align: center;
+        box-shadow: 0 4px 20px rgba(255, 0, 0, 0.2);
+        animation: banner-glow 3s ease-in-out infinite alternate;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .update-banner .close-btn {
+        margin-left: 10px;
+        cursor: pointer;
+        font-weight: bold;
+    }
+
+    @keyframes banner-glow {
+        from { box-shadow: 0 4px 20px rgba(204, 0, 255, 0.2); }
+        to { box-shadow: 0 4px 20px rgba(183, 0, 255, 0.4); }
+    }
+
+    .hero {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        padding: 80px 20px;
+        gap: 20px;
+        position: relative;
+    }
+
+    .hero-content {
+        max-width: 500px;
+        text-align: left;
+    }
+
+    .hero h1 {
+        font-size: 2.5rem;
+        font-weight: 900;
+        color: #ffffff;
+        line-height: 1.2;
+    }
+
+    .hero h1 span {
+        color: #d400ff;
+        text-shadow: 0px 0px 10px #f700ff;
+    }
+
+    .hero p {
+        color: #e0e0e0;
+        font-size: 1rem;
+        margin-top: 15px;
+    }
+
+    .hero button {
+        margin-top: 20px;
+        padding: 12px 30px;
+        font-size: 1rem;
+        border-radius: 30px;
+        background: rgba(225, 0, 255, 0.3);
+        border: 1px solid #666;
+        color: #fff;
+        transition: all 0.3s;
+    }
+
+    .hero button:hover {
+        background: rgba(255, 0, 242, 0.5);
+        border-color: rgba(234, 0, 255, 0.7);
+    }
+
+    .hero-image {
+        width: 650px;
+        height: 350px;
+        background-image: url('SupernalUI.jpg');
+        background-size: cover;
+        background-position: center;
+        border-radius: 20px;
+        transition: transform 0.3s, box-shadow 0.3s;
+        transform-style: preserve-3d;
+    }
+
+    .hero-image:hover {
+        box-shadow: 0px 4px 15px rgba(255, 0, 255, 0.5);
+        transform: rotateY(calc(var(--mouse-x, 0) * 15deg)) rotateX(calc(var(--mouse-y, 0) * -15deg));
+    }
+
+    .red-divider {
+        width: 80%;
+        height: 2px;
+        background: linear-gradient(90deg, rgba(255, 0, 0, 0), rgb(255, 0, 255) 20%, rgb(234, 0, 255) 80%, rgba(255, 0, 0, 0));
+        margin: 0 auto 40px;
+    }
+
+    .cta {
+        background: linear-gradient(to bottom, #1a1a1a, #000);
+        box-shadow: 0px 10px 25px rgba(0, 0, 0, 0.3);
+        text-align: center;
+        padding: 50px 20px;
+        margin: 40px auto;
+        max-width: 700px;
+        border-radius: 30px;
+        color: #e0e0e0;
+        border: 1px solid rgba(255, 255, 255, 0.3);
+    }
+
+    .cta h2 {
+        font-size: 2rem;
+        font-family: 'Raleway', sans-serif;
+        color: #e100ff;
+        font-weight: 900;
+        text-shadow: 0px 0px 5px #e100ff;
+    }
+
+    .cta p {
+        font-size: 1.125rem;
+        color: #cccccc;
+        margin-top: 10px;
+        margin-bottom: 24px;
+    }
+
+    .cta button {
+        background: rgba(255, 255, 255, 0.1);
+        border: 1px solid #666;
+        padding: 12px 30px;
+        font-size: 1rem;
+        color: #fff;
+        border-radius: 30px;
+        transition: all 0.3s;
+    }
+
+    .cta button:hover {
+        background: rgba(255, 255, 255, 0.2);
+        transform: scale(1.05);
+    }
+
+    .features {
+        display: flex;
+        gap: 20px;
+        justify-content: center;
+        margin: 40px auto;
+        padding: 20px;
+    }
+
+    .feature-card {
+        width: 300px;
+        padding: 20px;
+        background: rgba(255, 255, 255, 0.1);
+        border: 1px solid rgba(255, 255, 255, 0.3);
+        border-radius: 15px;
+        text-align: center;
+        transition: transform 0.3s, box-shadow 0.3s;
+    }
+
+    .feature-card:hover {
+        transform: translateY(-5px);
+        box-shadow: 0px 4px 15px rgba(255, 255, 255, 0.2);
+    }
+
+    .feature-card h3 {
+        color: #c300ff;
+        font-size: 1.25rem;
+        font-family: 'Raleway', sans-serif;
+        margin-bottom: 10px;
+    }
+
+    .showcase-content {
+        width: 600px;
+        height: 350px;
+        background-color: #333;
+        border-radius: 15px;
+        overflow: hidden;
+        border: 1px solid #666;
+    }
+
+    .video-player {
+        width: 100%;
+        height: 100%;
+    }
+
+    .glow-star, .glow-sphere {
+        position: absolute;
+        border-radius: 50%;
+        pointer-events: none;
+    }
+  </style>
+</head>
+<body>
+
+  <nav>
+    <div class="navbar-logo">
+      <img src="logos.png" alt="Logo">
+      <span class="navbar-logo-text">Supernal</span>
+    </div>
+    <div class="navbar-links">
+      <a onclick="smoothScrollTo('features')">Features</a>
+      <div class="discord-button"><a href="https://t.me/SupernalRB" style="color: inherit; text-decoration: none;"><i class="fab fa-telegram-plane"></i>ㅤTelegram</a></div>
+    </div>
+  </nav>
+
+  <section class="hero">
+    <div class="hero-content">
+      <h1>The Most Advanced <span>Roblox Executor</span> on the Market</h1>
+      <p>Experience the highest level of undetected Roblox exploits, offering unbeatable stability and features for your needs.</p>
+    </div>
+    <div class="hero-image"></div>
+  </section>
+
+  <div class="red-divider"></div>
+
+  <section class="cta">
+    <h2>Start Dominating Large Games Today</h2>
+    <p>Join Supernal and unlock powerful game scripts with top-notch security.</p>
+    <button onclick="window.location.href='https://t.me/SupernalRB';">Download</button>
+  </section>
+
+  <section id="features" class="features">
+    <div class="feature-card">
+      <h3>Quality of Execution</h3>
+      <p>The Exploit is carefully coded to fit your needs with high execution power!</p>
+    </div>
+    <div class="feature-card">
+      <h3>Cool Telegram Community!</h3>
+      <p>Join our Telegram to hang out and connect with others!</p>
+    </div>
+  </section>
+
+
+  <script>
+    document.querySelector('.hero-image').addEventListener('mousemove', function(e) {
+        const rect = e.target.getBoundingClientRect();
+        const x = e.clientX - rect.left;
+        const y = e.clientY - rect.top;
+        e.target.style.setProperty('--mouse-x', `${x / rect.width - 0.5}`);
+        e.target.style.setProperty('--mouse-y', `${y / rect.height - 0.5}`);
+    });
+
+    // Smooth scroll function
+    function smoothScrollTo(id) {
+        document.getElementById(id).scrollIntoView({ behavior: 'smooth', block: 'center' });
+    }
+
+    // Background effect with white glowing stars inside the viewport
+    function addBackgroundElements(elementClass, numElements) {
+        const body = document.body;
+        for (let i = 0; i < numElements; i++) {
+            const element = document.createElement('div');
+            element.className = elementClass;
+            element.style.left = `${Math.random() * 100}vw`;
+            element.style.top = `${Math.random() * window.innerHeight}px`;
+            if (elementClass === 'glow-star') {
+                element.style.width = `${Math.random() * 3 + 1}px`;
+                element.style.height = element.style.width;
+                element.style.background = 'rgba(255, 255, 255, 0.6)';
+                element.style.filter = 'blur(1px)';
+            } else if (elementClass === 'glow-sphere') {
+                element.style.width = `${Math.random() * 150 + 50}px`;
+                element.style.height = element.style.width;
+                element.style.background = 'rgba(255, 255, 255, 0.2)';
+                element.style.filter = 'blur(50px)';
+            }
+            body.appendChild(element);
+        }
+    }
+
+    addBackgroundElements('glow-star', 70);
+    addBackgroundElements('glow-sphere', 10);
+  </script>
+</body>
+</html>

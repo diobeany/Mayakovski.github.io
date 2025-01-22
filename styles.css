@@ -1,0 +1,250 @@
+body {
+    background-color: #000;
+    color: #e0e0e0;
+    font-family: 'Inter', sans-serif;
+    margin: 0;
+    overflow-x: hidden;
+}
+
+nav {
+    background: transparent;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 8px 20px;
+    border-radius: 20px;
+    width: 70%;
+    margin: 20px auto;
+}
+
+nav a {
+    color: #ffffff;
+    margin: 0 12px;
+    font-weight: 600;
+    transition: color 0.3s;
+}
+
+nav a:hover {
+    color: #ff0040;
+}
+
+.update-banner {
+    position: absolute;
+    top: 70px;
+    left: 50%;
+    transform: translateX(-50%);
+    padding: 8px 20px;
+    background: rgba(255, 0, 0, 0.1);
+    color: #fff;
+    border-radius: 20px;
+    font-size: 0.875rem;
+    font-weight: 700;
+    text-align: center;
+    box-shadow: 0 4px 20px rgba(255, 0, 0, 0.2);
+    animation: banner-glow 3s ease-in-out infinite alternate;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.update-banner .close-btn {
+    margin-left: 10px;
+    cursor: pointer;
+    font-weight: bold;
+}
+
+@keyframes banner-glow {
+    from { box-shadow: 0 4px 20px rgba(255, 0, 0, 0.2); }
+    to { box-shadow: 0 4px 20px rgba(255, 0, 0, 0.4); }
+}
+
+.hero {
+    display: flex;
+    align-items: center;
+    padding: 80px 20px;
+    gap: 20px;
+}
+
+.hero-content {
+    flex: 1;
+    text-align: left;
+}
+
+.hero h1 {
+    font-size: 3rem;
+    font-weight: 900;
+    color: #ffffff;
+    line-height: 1.2;
+}
+
+.hero h1 span {
+    color: #ff0040;
+    text-shadow: 0px 0px 10px #ff0040;
+}
+
+.hero p {
+    color: #e0e0e0;
+    font-size: 1.125rem;
+    margin-top: 20px;
+}
+
+.hero button {
+    margin-top: 20px;
+    padding: 12px 30px;
+    font-size: 1rem;
+    border-radius: 30px;
+    background: rgba(255, 0, 0, 0.3);
+    border: 1px solid #666;
+    color: #fff;
+    transition: all 0.3s;
+}
+
+.hero button:hover {
+    background: rgba(255, 0, 0, 0.5);
+    border-color: rgba(255, 0, 0, 0.7);
+}
+
+.hero-image {
+    width: 300px;
+    height: 350px;
+    background-color: #1a1a1a;
+    border-radius: 20px;
+    transition: transform 0.3s, box-shadow 0.3s;
+    transform-style: preserve-3d;
+}
+
+.hero-image:hover {
+    box-shadow: 0px 4px 15px rgba(255, 0, 0, 0.5);
+    transform: rotateY(calc(var(--mouse-x, 0) * 15deg)) rotateX(calc(var(--mouse-y, 0) * -15deg));
+}
+
+.cta {
+    background: radial-gradient(circle at center, #1a1a1a, #000);
+    box-shadow: 0px 10px 25px rgba(0, 0, 0, 0.3);
+    text-align: center;
+    padding: 50px 20px;
+    margin: 40px auto;
+    max-width: 700px;
+    border-radius: 30px;
+    color: #e0e0e0;
+}
+
+.cta h2 {
+    font-size: 2rem;
+    color: #ff0040;
+    font-weight: 900;
+    text-shadow: 0px 0px 5px #ff0040;
+}
+
+.cta p {
+    font-size: 1.125rem;
+    color: #cccccc;
+    margin-top: 10px;
+    margin-bottom: 24px;
+}
+
+.cta button {
+    background: rgba(255, 255, 255, 0.1);
+    border: 1px solid #666;
+    padding: 12px 30px;
+    font-size: 1rem;
+    color: #fff;
+    border-radius: 30px;
+    transition: all 0.3s;
+}
+
+.cta button:hover {
+    background: rgba(255, 255, 255, 0.2);
+    transform: scale(1.05);
+}
+
+.showcase {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+    padding: 50px 0;
+}
+
+.showcase-content {
+    width: 600px;
+    height: 350px;
+    background-color: #333;
+    border: 1px solid #666;
+    border-radius: 15px;
+}
+
+.showcase-button {
+    width: 50px;
+    height: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #1a1a1a;
+    color: #ff0040;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background 0.3s;
+}
+
+.showcase-button:hover {
+    background-color: #333;
+}
+
+.contributors {
+    background: #1a1a1a;
+    padding: 20px;
+    margin: 40px auto;
+    width: 600px;
+    text-align: center;
+    border: 1px solid #666;
+    border-radius: 20px;
+    box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.3);
+}
+
+.contributors h3 {
+    font-size: 1.5rem;
+    color: #ff0040;
+    margin-bottom: 10px;
+}
+
+.contributors p {
+    color: #ccc;
+    font-size: 1rem;
+    margin-bottom: 10px;
+}
+
+.contributors-list {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    margin-top: 20px;
+    color: #ccc;
+}
+
+footer {
+    background: rgba(15, 15, 15, 0.7);
+    padding: 20px;
+    color: #999;
+    text-align: center;
+    margin: 40px auto;
+    width: 70%;
+    border: 1px solid #666;
+    border-radius: 10px;
+}
+
+footer a {
+    color: #cccccc;
+    transition: color 0.3s ease;
+}
+
+footer a:hover {
+    color: #ff0040;
+}
+
+.footer-links {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    flex-wrap: wrap;
+}
